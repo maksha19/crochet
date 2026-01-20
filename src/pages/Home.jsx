@@ -68,7 +68,7 @@ export const Home = () => {
                 <div className="container mx-auto px-4">
                     <div className="max-w-3xl mx-auto text-center">
                         <h2 className="font-heading text-4xl text-text mb-6">
-                            About Cozy Crochet
+                            About Happy Stitch
                         </h2>
                         <p className="text-text-light text-lg leading-relaxed mb-6">
                             Every piece in our collection is carefully handcrafted with premium quality yarn.

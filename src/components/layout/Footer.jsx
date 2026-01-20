@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export const Footer = () => {
     const currentYear = new Date().getFullYear();
 
@@ -7,7 +9,7 @@ export const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {/* About */}
                     <div>
-                        <h3 className="font-heading text-xl mb-4">Cozy Crochet</h3>
+                        <h3 className="font-heading text-xl mb-4">Happy Stitch</h3>
                         <p className="text-white/80 text-sm leading-relaxed">
                             Handcrafted crochet items made with love and care. Each piece is unique and created with premium quality yarn.
                         </p>
@@ -18,19 +20,19 @@ export const Footer = () => {
                         <h3 className="font-heading text-xl mb-4">Quick Links</h3>
                         <ul className="space-y-2 text-sm">
                             <li>
-                                <a href="/" className="text-white/80 hover:text-white transition-colors">
+                                <Link to="/" className="text-white/80 hover:text-white transition-colors">
                                     Home
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/shop" className="text-white/80 hover:text-white transition-colors">
+                                <Link to="/shop" className="text-white/80 hover:text-white transition-colors">
                                     Shop
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/cart" className="text-white/80 hover:text-white transition-colors">
-                                    Cart
-                                </a>
+                                <Link to="/#about" className="text-white/80 hover:text-white transition-colors">
+                                    About Us
+                                </Link>
                             </li>
                         </ul>
                     </div>
@@ -57,7 +59,7 @@ export const Footer = () => {
                 </div>
 
                 <div className="border-t border-white/20 mt-8 pt-8 text-center text-sm text-white/60">
-                    <p>&copy; {currentYear} Cozy Crochet. All rights reserved. Handmade with ❤️</p>
+                    <p>&copy; {currentYear} Happy Stitch. All rights reserved. Handmade with ❤️</p>
                 </div>
             </div>
         </footer>

@@ -2,7 +2,7 @@
   "name": "crochet",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://maksha19.github.io/crochet/",
+  "homepage": "https://www.happystitch.shop/",
   "type": "module",
   "scripts": {
     "dev": "vite",

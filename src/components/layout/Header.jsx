@@ -12,7 +12,7 @@ export const Header = () => {
                     {/* Logo */}
                     <Link to="/" className="group">
                         <h1 className="font-heading text-3xl text-primary group-hover:text-primary-dark transition-colors">
-                            Cozy Crochet
+                            Happy Stitch
                         </h1>
                     </Link>
 
@@ -30,12 +30,12 @@ export const Header = () => {
                         >
                             Shop
                         </Link>
-                        <a
-                            href="#about"
+                        <Link
+                            to="/#about"
                             className="text-text hover:text-primary transition-colors font-medium"
                         >
                             About
-                        </a>
+                        </Link>
                     </nav>
 
                     {/* Cart Icon */}
@@ -72,12 +72,12 @@ export const Header = () => {
                     >
                         Shop
                     </Link>
-                    <a
-                        href="#about"
+                    <Link
+                        to="/#about"
                         className="text-text hover:text-primary transition-colors font-medium text-sm"
                     >
                         About
-                    </a>
+                    </Link>
                 </nav>
             </div>
         </header>
