@@ -9,7 +9,7 @@ import { Checkout } from './pages/Checkout';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <CartProvider>
         <div className="min-h-screen bg-background flex flex-col">
           <Header />
