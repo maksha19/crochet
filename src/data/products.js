@@ -17,7 +17,7 @@ export const products = [
         ],
         "price": 129.99,
         "category": "crochet-keychains",
-        "image": "/images/products/butterfly-keychain.jpg",
+        "image": "/images/keychain/butterfly.png",
         "colors": ["cream", "pastel-pink", "lavender", "black"],
         "inStock": true,
         "featured": true
@@ -39,7 +39,7 @@ export const products = [
         ],
         "price": 139.99,
         "category": "crochet-keychains",
-        "image": "/images/products/mini-bag-keychain.jpg",
+        "image": "/images/keychain/mini_bag.png",
         "colors": ["beige", "dusty-rose"],
         "inStock": true,
         "featured": false
@@ -61,13 +61,13 @@ export const products = [
         ],
         "price": 149.99,
         "category": "crochet-keychains",
-        "image": "/images/products/angel-keychain.jpg",
+        "image": "/images/keychain/angel.png",
         "colors": ["ivory", "white"],
         "inStock": true,
         "featured": false
     }, {
         "id": "Trio_Keychain",
-        "name": "Trio Keychain",
+        "name": "Trio Keychain dasd",
         "description": "The trio keychain showcases harmonious handmade crochet artistry in a coordinated luxury design. Crafted for elegant gifting and artisan appreciation.",
         "detailedUsageAndBenefits": [
             "Used as a coordinated keychain set",
@@ -82,7 +82,7 @@ export const products = [
         ],
         "price": 249.99,
         "category": "crochet-keychains",
-        "image": "/images/products/trio-keychain.jpg",
+        "image": "/images/keychain/trio.png",
         "colors": ["neutral-mix"],
         "inStock": true,
         "featured": true
@@ -104,33 +104,33 @@ export const products = [
         ],
         "price": 119.99,
         "category": "crochet-keychains",
-        "image": "/images/products/strawberry-keychain.jpg",
+        "image": "/images/keychain/strawberry.jpg",
         "colors": ["red", "green"],
         "inStock": true,
         "featured": false
     },
-    {
-        "id": "Grapes_Keychain",
-        "name": "Grapes Keychain",
-        "description": "The grapes keychain is an intricately handmade crochet piece symbolizing abundance and elegance.",
-        "detailedUsageAndBenefits": [
-            "Used as a keychain or decorative charm",
-            "Symbolizes prosperity and celebration",
-            "Ideal for housewarming and festive gifts",
-            "Premium handmade crochet durability",
-            "Lightweight and reusable"
-        ],
-        "caption": [
-            "Abundance in every stitch 🍇",
-            "Handmade crochet with luxury detail"
-        ],
-        "price": 119.99,
-        "category": "crochet-keychains",
-        "image": "/images/products/grapes-keychain.jpg",
-        "colors": ["purple", "green"],
-        "inStock": true,
-        "featured": false
-    },
+    // {
+    //     "id": "Grapes_Keychain",
+    //     "name": "Grapes Keychain",
+    //     "description": "The grapes keychain is an intricately handmade crochet piece symbolizing abundance and elegance.",
+    //     "detailedUsageAndBenefits": [
+    //         "Used as a keychain or decorative charm",
+    //         "Symbolizes prosperity and celebration",
+    //         "Ideal for housewarming and festive gifts",
+    //         "Premium handmade crochet durability",
+    //         "Lightweight and reusable"
+    //     ],
+    //     "caption": [
+    //         "Abundance in every stitch 🍇",
+    //         "Handmade crochet with luxury detail"
+    //     ],
+    //     "price": 119.99,
+    //     "category": "crochet-keychains",
+    //     "image": "/images/products/grapes-keychain.jpg",
+    //     "colors": ["purple", "green"],
+    //     "inStock": true,
+    //     "featured": false
+    // },
     {
         "id": "Letter_Envelope_Keychain",
         "name": "Letter Envelope Keychain",
@@ -148,7 +148,7 @@ export const products = [
         ],
         "price": 129.99,
         "category": "crochet-keychains",
-        "image": "/images/products/envelope-keychain.jpg",
+        "image": "/images/keychain/envelope.jpeg",
         "colors": ["cream", "blush"],
         "inStock": true,
         "featured": false
@@ -170,7 +170,7 @@ export const products = [
         ],
         "price": 399.99,
         "category": "crochet-flowers",
-        "image": "/images/products/sunflower-crochet.jpg",
+        "image": "/images/flower/sunflower.jpeg",
         "colors": ["yellow"],
         "inStock": true,
         "featured": true
@@ -192,7 +192,7 @@ export const products = [
         ],
         "price": 349.99,
         "category": "crochet-flowers",
-        "image": "/images/products/lavender-crochet.jpg",
+        "image": "/images/flower/lavender.jpeg",
         "colors": ["lavender"],
         "inStock": true,
         "featured": false
@@ -214,7 +214,7 @@ export const products = [
         ],
         "price": 349.99,
         "category": "crochet-flowers",
-        "image": "/images/products/tulip-crochet.jpg",
+        "image": "/images/flower/tulip.jpeg",
         "colors": ["pink", "white"],
         "inStock": true,
         "featured": false
@@ -236,7 +236,7 @@ export const products = [
         ],
         "price": 299.99,
         "category": "crochet-figurines",
-        "image": "/images/products/bell-crochet.jpg",
+        "image": "/images/figurine/bell.jpeg",
         "colors": ["gold", "cream"],
         "inStock": true,
         "featured": false
