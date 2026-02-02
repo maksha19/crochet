@@ -15,12 +15,13 @@ export const products = [
             "A handmade crochet treasure for everyday elegance",
             "Perfect little luxury gift"
         ],
-        "price": 129.99,
+        "price": 3.99,
         "category": "crochet-keychains",
         "image": "/images/keychain/butterfly.png",
-        "colors": ["cream", "pastel-pink", "lavender", "black"],
+        "colors": [],
         "inStock": true,
-        "featured": true
+        "featured": true,
+        "quantity": 1
     },
     {
         "id": "Mini_Bag_Keychain",
@@ -37,10 +38,10 @@ export const products = [
             "Tiny bag, timeless charm 👜",
             "Handmade crochet with luxury detail"
         ],
-        "price": 139.99,
+        "price": 3.99,
         "category": "crochet-keychains",
-        "image": "/images/keychain/mini_bag.png",
-        "colors": ["beige", "dusty-rose"],
+        "image": "/images/keychain/minibag.jpeg",
+        "colors": [],
         "inStock": true,
         "featured": false
     },
@@ -59,10 +60,10 @@ export const products = [
             "A little angel, made with love 👼",
             "Handcrafted crochet with meaning"
         ],
-        "price": 149.99,
+        "price": 3.99,
         "category": "crochet-keychains",
-        "image": "/images/keychain/angel.png",
-        "colors": ["ivory", "white"],
+        "image": "/images/keychain/angel.jpeg",
+        "colors": [],
         "inStock": true,
         "featured": false
     }, {
@@ -80,10 +81,10 @@ export const products = [
             "Three charms, one story ✨",
             "Handmade crochet in perfect harmony"
         ],
-        "price": 249.99,
+        "price": 2.99,
         "category": "crochet-keychains",
-        "image": "/images/keychain/trio.png",
-        "colors": ["neutral-mix"],
+        "image": "/images/keychain/trio.jpeg",
+        "colors": [],
         "inStock": true,
         "featured": true
     },
@@ -102,35 +103,13 @@ export const products = [
             "Sweet details, handcrafted 🍓",
             "A playful luxury crochet charm"
         ],
-        "price": 119.99,
+        "price": 3.99,
         "category": "crochet-keychains",
         "image": "/images/keychain/strawberry.jpg",
-        "colors": ["red", "green"],
+        "colors": [],
         "inStock": true,
         "featured": false
     },
-    // {
-    //     "id": "Grapes_Keychain",
-    //     "name": "Grapes Keychain",
-    //     "description": "The grapes keychain is an intricately handmade crochet piece symbolizing abundance and elegance.",
-    //     "detailedUsageAndBenefits": [
-    //         "Used as a keychain or decorative charm",
-    //         "Symbolizes prosperity and celebration",
-    //         "Ideal for housewarming and festive gifts",
-    //         "Premium handmade crochet durability",
-    //         "Lightweight and reusable"
-    //     ],
-    //     "caption": [
-    //         "Abundance in every stitch 🍇",
-    //         "Handmade crochet with luxury detail"
-    //     ],
-    //     "price": 119.99,
-    //     "category": "crochet-keychains",
-    //     "image": "/images/products/grapes-keychain.jpg",
-    //     "colors": ["purple", "green"],
-    //     "inStock": true,
-    //     "featured": false
-    // },
     {
         "id": "Letter_Envelope_Keychain",
         "name": "Letter Envelope Keychain",
@@ -146,10 +125,10 @@ export const products = [
             "A message stitched with love ✉️",
             "Handcrafted crochet elegance"
         ],
-        "price": 129.99,
+        "price": 2.99,
         "category": "crochet-keychains",
         "image": "/images/keychain/envelope.jpeg",
-        "colors": ["cream", "blush"],
+        "colors": [],
         "inStock": true,
         "featured": false
     },
@@ -168,10 +147,10 @@ export const products = [
             "Forever sunshine in bloom 🌻",
             "Handmade crochet with warmth"
         ],
-        "price": 399.99,
+        "price": 14.99,
         "category": "crochet-flowers",
         "image": "/images/flower/sunflower.jpeg",
-        "colors": ["yellow"],
+        "colors": [],
         "inStock": true,
         "featured": true
     },
@@ -190,10 +169,10 @@ export const products = [
             "Calm stitched in lavender 💜",
             "Handcrafted crochet elegance"
         ],
-        "price": 349.99,
+        "price": 14.99,
         "category": "crochet-flowers",
         "image": "/images/flower/lavender.jpeg",
-        "colors": ["lavender"],
+        "colors": [],
         "inStock": true,
         "featured": false
     },
@@ -212,10 +191,10 @@ export const products = [
             "Timeless tulip beauty 🌷",
             "Handmade crochet perfection"
         ],
-        "price": 349.99,
+        "price": 14.99,
         "category": "crochet-flowers",
         "image": "/images/flower/tulip.jpeg",
-        "colors": ["pink", "white"],
+        "colors": [],
         "inStock": true,
         "featured": false
     },
@@ -234,32 +213,10 @@ export const products = [
             "A soft ring of elegance 🔔",
             "Handmade crochet with meaning"
         ],
-        "price": 299.99,
+        "price": 9.99,
         "category": "crochet-figurines",
         "image": "/images/figurine/bell.jpeg",
-        "colors": ["gold", "cream"],
-        "inStock": true,
-        "featured": false
-    },
-    {
-        "id": "Butterfly_Crochet_Decor",
-        "name": "Butterfly Crochet Decor",
-        "description": "This butterfly crochet décor piece is a refined handmade crochet accent symbolizing elegance and renewal.",
-        "detailedUsageAndBenefits": [
-            "Used as wall or shelf décor",
-            "Symbolizes transformation and positivity",
-            "Ideal for home styling",
-            "Durable handmade crochet",
-            "Zero-maintenance décor"
-        ],
-        "caption": [
-            "Elegance in every wing 🦋",
-            "Handcrafted crochet décor"
-        ],
-        "price": 379.99,
-        "category": "crochet-decor",
-        "image": "/images/products/butterfly-crochet-decor.jpg",
-        "colors": ["pastel-mix"],
+        "colors": [],
         "inStock": true,
         "featured": false
     },
@@ -278,10 +235,10 @@ export const products = [
             "A guardian stitched with care 👼",
             "Handmade crochet elegance"
         ],
-        "price": 499.99,
+        "price": 9.99,
         "category": "crochet-figurines",
-        "image": "/images/products/angel-crochet-figurine.jpg",
-        "colors": ["white"],
+        "image": "/images/figurine/angel.jpeg",
+        "colors": [],
         "inStock": true,
         "featured": true
     },
@@ -300,10 +257,10 @@ export const products = [
             "Tech meets handmade luxury 🎧",
             "Crochet protection with style"
         ],
-        "price": 299.99,
+        "price": 4.99,
         "category": "crochet-utility",
-        "image": "/images/products/airpod-pouch.jpg",
-        "colors": ["beige", "gray"],
+        "image": "/images/utility/airpod.jpeg",
+        "colors": [],
         "inStock": true,
         "featured": true
     },
@@ -322,10 +279,10 @@ export const products = [
             "Small bag, timeless charm ✨",
             "Handmade crochet utility"
         ],
-        "price": 249.99,
+        "price": 7.99,
         "category": "crochet-utility",
-        "image": "/images/products/drawstring-coin-bag.jpg",
-        "colors": ["neutral"],
+        "image": "/images/utility/coinbag.jpeg",
+        "colors": [],
         "inStock": true,
         "featured": false
     },
@@ -344,10 +301,10 @@ export const products = [
             "Carry your phone in style 📱",
             "Handmade crochet elegance"
         ],
-        "price": 349.99,
+        "price": 5.99,
         "category": "crochet-utility",
-        "image": "/images/products/phone-pouch.jpg",
-        "colors": ["beige", "brown"],
+        "image": "/images/utility/phonepouch.jpeg",
+        "colors": [],
         "inStock": true,
         "featured": false
     },
@@ -366,10 +323,10 @@ export const products = [
             "Pause your story in style 📖",
             "Handmade crochet elegance"
         ],
-        "price": 149.99,
+        "price": 2.99,
         "category": "crochet-utility",
-        "image": "/images/products/crochet-bookmark.jpg",
-        "colors": ["pastel"],
+        "image": "/images/utility/bookmark.jpeg",
+        "colors": [],
         "inStock": true,
         "featured": false
     },
@@ -388,10 +345,10 @@ export const products = [
             "Walls dressed in handmade beauty 🌸",
             "Crochet décor with luxury charm"
         ],
-        "price": 599.99,
+        "price": 11.99,
         "category": "crochet-home-decor",
-        "image": "/images/products/wall-hanging-bouquet.jpg",
-        "colors": ["neutral-mix"],
+        "image": "/images/homedecor/miniwallhanging.jpeg",
+        "colors": [],
         "inStock": true,
         "featured": true
     },
@@ -410,35 +367,35 @@ export const products = [
             "Green beauty, forever fresh 🌿",
             "Handmade crochet décor"
         ],
-        "price": 549.99,
+        "price": 10.99,
         "category": "crochet-home-decor",
-        "image": "/images/products/crochet-potted-plant.jpg",
-        "colors": ["green"],
+        "image": "/images/homedecor/pottedplant.jpeg",
+        "colors": [],
         "inStock": true,
         "featured": false
     },
-    {
-        "id": "Pattern_Flower",
-        "name": "Pattern Flower",
-        "description": "This pattern flower is an artistic handmade crochet creation crafted with intricate detailing.",
-        "detailedUsageAndBenefits": [
-            "Used as decorative accent",
-            "Symbolizes creativity",
-            "Ideal for gifting",
-            "Premium handmade crochet",
-            "Zero-maintenance"
-        ],
-        "caption": [
-            "Art in every stitch 🌼",
-            "Handmade crochet sophistication"
-        ],
-        "price": 449.99,
-        "category": "crochet-home-decor",
-        "image": "/images/products/pattern-flower.jpg",
-        "colors": ["assorted"],
-        "inStock": true,
-        "featured": false
-    },
+    // {
+    //     "id": "Pattern_Flower",
+    //     "name": "Pattern Flower",
+    //     "description": "This pattern flower is an artistic handmade crochet creation crafted with intricate detailing.",
+    //     "detailedUsageAndBenefits": [
+    //         "Used as decorative accent",
+    //         "Symbolizes creativity",
+    //         "Ideal for gifting",
+    //         "Premium handmade crochet",
+    //         "Zero-maintenance"
+    //     ],
+    //     "caption": [
+    //         "Art in every stitch 🌼",
+    //         "Handmade crochet sophistication"
+    //     ],
+    //     "price": 449.99,
+    //     "category": "crochet-home-decor",
+    //     "image": "/images/homedecor/patternflower.jpeg",
+    //     "colors": ["assorted"],
+    //     "inStock": true,
+    //     "featured": false
+    // },
     {
         "id": "Single_Rose_Bouquet",
         "name": "Single Rose Bouquet",
@@ -454,10 +411,10 @@ export const products = [
             "A rose that lasts forever 🌹",
             "Handmade crochet luxury"
         ],
-        "price": 499.99,
+        "price": 4.99,
         "category": "crochet-home-decor",
-        "image": "/images/products/single-rose-bouquet.jpg",
-        "colors": ["red"],
+        "image": "/images/homedecor/singlerose.jpeg",
+        "colors": [],
         "inStock": true,
         "featured": true
     }, {
@@ -475,10 +432,10 @@ export const products = [
             "Tables styled with elegance ☕",
             "Handmade crochet luxury"
         ],
-        "price": 199.99,
+        "price": 1.99,
         "category": "crochet-table",
-        "image": "/images/products/crochet-coaster.jpg",
-        "colors": ["neutral"],
+        "image": "/images/tableaccessories/coaster.jpeg",
+        "colors": [],
         "inStock": true,
         "featured": false
     },
@@ -497,35 +454,35 @@ export const products = [
             "Sip in handmade style 🥂",
             "Crochet elegance for your table"
         ],
-        "price": 229.99,
+        "price": 4.99,
         "category": "crochet-table",
-        "image": "/images/products/crochet-glass-holder.jpg",
-        "colors": ["neutral"],
+        "image": "/images/tableaccessories/glassholder.jpeg",
+        "colors": [],
         "inStock": true,
         "featured": false
-    },
-    {
-        "id": "Crochet_Door_Decorative",
-        "name": "Crochet Door Decorative",
-        "description": "This crochet door decorative is an elegant handmade crochet accent crafted to welcome with warmth.",
-        "detailedUsageAndBenefits": [
-            "Used as door or wall décor",
-            "Symbolizes welcome and positivity",
-            "Ideal for housewarming",
-            "Durable handmade crochet",
-            "Zero-maintenance"
-        ],
-        "caption": [
-            "Welcome guests with handmade charm 🚪",
-            "Crochet décor with elegance"
-        ],
-        "price": 379.99,
-        "category": "crochet-door",
-        "image": "/images/products/crochet-door-decor.jpg",
-        "colors": ["neutral"],
-        "inStock": true,
-        "featured": true
     }
+    // {
+    //     "id": "Crochet_Door_Decorative",
+    //     "name": "Crochet Door Decorative",
+    //     "description": "This crochet door decorative is an elegant handmade crochet accent crafted to welcome with warmth.",
+    //     "detailedUsageAndBenefits": [
+    //         "Used as door or wall décor",
+    //         "Symbolizes welcome and positivity",
+    //         "Ideal for housewarming",
+    //         "Durable handmade crochet",
+    //         "Zero-maintenance"
+    //     ],
+    //     "caption": [
+    //         "Welcome guests with handmade charm 🚪",
+    //         "Crochet décor with elegance"
+    //     ],
+    //     "price": 379.99,
+    //     "category": "crochet-door",
+    //     "image": "/images/products/crochet-door-decor.jpg",
+    //     "colors": ["neutral"],
+    //     "inStock": true,
+    //     "featured": true
+    // }
 ];
 
 export const categories = [
@@ -540,6 +497,6 @@ export const categories = [
 
     { id: 'crochet-home-decor', name: 'Home Décor' },
 
-    { id: 'crochet-table', name: 'Table Accessories' },
-    { id: 'crochet-door', name: 'Door Decoratives' }
+    { id: 'crochet-table', name: 'Table Accessories' }
+    // { id: 'crochet-door', name: 'Door Decoratives' }
 ];
