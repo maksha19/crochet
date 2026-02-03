@@ -20,7 +20,7 @@ export const products = [
         "image": "/images/keychain/butterfly.png",
         "colors": [],
         "inStock": true,
-        "featured": false,
+        "featured": true,
         "quantity": 1
     },
     {
@@ -86,7 +86,7 @@ export const products = [
         "image": "/images/keychain/trio.jpeg",
         "colors": [],
         "inStock": true,
-        "featured": false
+        "featured": true
     },
     {
         "id": "Strawberry_Keychain",
@@ -152,7 +152,7 @@ export const products = [
         "image": "/images/flower/sunflower.jpeg",
         "colors": [],
         "inStock": true,
-        "featured": false
+        "featured": true
     },
     {
         "id": "Lavender_Crochet",
@@ -215,7 +215,7 @@ export const products = [
         ],
         "price": 3.99,
         "category": "crochet-flowers",
-        "image": "/images/flower/singletuilp.jpeg",
+        "image": "/images/flower/singletulip.jpeg",
         "colors": [],
         "inStock": true,
         "featured": false
@@ -262,7 +262,7 @@ export const products = [
         "image": "/images/figurine/angel.jpeg",
         "colors": [],
         "inStock": true,
-        "featured": false
+        "featured": true
     },
     {
         "id": "AirPod_Pouch",
@@ -284,7 +284,7 @@ export const products = [
         "image": "/images/utility/airpod.jpeg",
         "colors": [],
         "inStock": true,
-        "featured": false
+        "featured": true
     },
     {
         "id": "Drawstring_Coin_Bag",
@@ -372,7 +372,7 @@ export const products = [
         "image": "/images/homedecor/miniwallhanging.jpeg",
         "colors": [],
         "inStock": true,
-        "featured": false
+        "featured": true
     },
     {
         "id": "Crochet_Potted_Plant",
@@ -438,7 +438,7 @@ export const products = [
         "image": "/images/homedecor/singlerose.jpeg",
         "colors": [],
         "inStock": true,
-        "featured": false
+        "featured": true
     }, {
         "id": "Crochet_Coaster",
         "name": "Crochet Coaster",
@@ -503,7 +503,7 @@ export const products = [
     //     "image": "/images/products/crochet-door-decor.jpg",
     //     "colors": ["neutral"],
     //     "inStock": true,
-    //     "featured": false
+    //     "featured": true
     // }
 ];
 
