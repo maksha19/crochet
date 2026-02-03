@@ -20,7 +20,7 @@ export const products = [
         "image": "/images/keychain/butterfly.png",
         "colors": [],
         "inStock": true,
-        "featured": true,
+        "featured": false,
         "quantity": 1
     },
     {
@@ -86,7 +86,7 @@ export const products = [
         "image": "/images/keychain/trio.jpeg",
         "colors": [],
         "inStock": true,
-        "featured": true
+        "featured": false
     },
     {
         "id": "Strawberry_Keychain",
@@ -152,7 +152,7 @@ export const products = [
         "image": "/images/flower/sunflower.jpeg",
         "colors": [],
         "inStock": true,
-        "featured": true
+        "featured": false
     },
     {
         "id": "Lavender_Crochet",
@@ -199,6 +199,28 @@ export const products = [
         "featured": false
     },
     {
+        "id": "Tulip_Crochet",
+        "name": "Single Tulip Crochet",
+        "description": "This tulip crochet creation is a refined handmade crochet floral accent crafted with elegance.",
+        "detailedUsageAndBenefits": [
+            "Used as décor or gifting flower",
+            "Symbolizes love and renewal",
+            "Ideal for anniversaries and birthdays",
+            "Handmade crochet durability",
+            "Zero-maintenance floral elegance"
+        ],
+        "caption": [
+            "Timeless tulip beauty 🌷",
+            "Handmade crochet perfection"
+        ],
+        "price": 3.99,
+        "category": "crochet-flowers",
+        "image": "/images/flower/singletuilp.jpeg",
+        "colors": [],
+        "inStock": true,
+        "featured": false
+    },
+    {
         "id": "Bell_Crochet",
         "name": "Bell Crochet",
         "description": "The bell crochet is an elegant handmade crochet accent crafted with symbolic charm.",
@@ -240,7 +262,7 @@ export const products = [
         "image": "/images/figurine/angel.jpeg",
         "colors": [],
         "inStock": true,
-        "featured": true
+        "featured": false
     },
     {
         "id": "AirPod_Pouch",
@@ -262,7 +284,7 @@ export const products = [
         "image": "/images/utility/airpod.jpeg",
         "colors": [],
         "inStock": true,
-        "featured": true
+        "featured": false
     },
     {
         "id": "Drawstring_Coin_Bag",
@@ -350,7 +372,7 @@ export const products = [
         "image": "/images/homedecor/miniwallhanging.jpeg",
         "colors": [],
         "inStock": true,
-        "featured": true
+        "featured": false
     },
     {
         "id": "Crochet_Potted_Plant",
@@ -416,7 +438,7 @@ export const products = [
         "image": "/images/homedecor/singlerose.jpeg",
         "colors": [],
         "inStock": true,
-        "featured": true
+        "featured": false
     }, {
         "id": "Crochet_Coaster",
         "name": "Crochet Coaster",
@@ -481,7 +503,7 @@ export const products = [
     //     "image": "/images/products/crochet-door-decor.jpg",
     //     "colors": ["neutral"],
     //     "inStock": true,
-    //     "featured": true
+    //     "featured": false
     // }
 ];
 
