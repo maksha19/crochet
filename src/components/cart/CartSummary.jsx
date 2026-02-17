@@ -16,10 +16,10 @@ export const CartSummary = ({ cart }) => {
                     <span>Subtotal ({cart.items.reduce((sum, item) => sum + item.quantity, 0)} items)</span>
                     <span>${subtotal.toFixed(2)}</span>
                 </div>
-                <div className="flex justify-between text-text-light">
+                {/* <div className="flex justify-between text-text-light">
                     <span>Shipping</span>
                     <span>{shipping === 0 ? 'FREE' : `$${shipping.toFixed(2)}`}</span>
-                </div>
+                </div> */}
                 {/* {subtotal < 100 && subtotal > 0 && (
                     <p className="text-sm text-success">
                         Spend ${(100 - subtotal).toFixed(2)} more for free shipping!
