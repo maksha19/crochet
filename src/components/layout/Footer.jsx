@@ -41,7 +41,7 @@ export const Footer = () => {
                     <div>
                         <h3 className="font-heading text-xl mb-4">Contact</h3>
                         <p className="text-white/80 text-sm mb-2">
-                            Email: devi2403@outlook.com
+                            Phone: +65 83646492
                         </p>
                         <div className="flex gap-4 mt-4">
                             <a href="#" className="text-white/80 hover:text-white transition-colors">

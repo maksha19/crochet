@@ -21,7 +21,8 @@ export const Checkout = () => {
     });
 
     const subtotal = cart.total;
-    const shipping = subtotal > 100 ? 0 : 9.99;
+    // const shipping = subtotal > 100 ? 0 : 9.99;
+    const shipping = 0;
     const total = subtotal + shipping;
 
     const handleInputChange = (e) => {
@@ -57,13 +58,13 @@ export const Checkout = () => {
 
         message += `*Order Summary:*\n`;
         message += `Subtotal: $${subtotal.toFixed(2)}\n`;
-        message += `Shipping: ${shipping === 0 ? 'FREE' : '$' + shipping.toFixed(2)}\n`;
+        // message += `Shipping: ${shipping === 0 ? 'FREE' : '$' + shipping.toFixed(2)}\n`;
         message += `*Total: $${total.toFixed(2)}*\n\n`;
         message += `Thank you for your order! 🧶`;
 
         // Encode message for WhatsApp URL
         const encodedMessage = encodeURIComponent(message);
-        const whatsappNumber = '6583135769'; // Singapore format with country code
+        const whatsappNumber = '6583646492'; // Singapore format with country code
         const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
         // Open WhatsApp in new window
@@ -273,10 +274,10 @@ export const Checkout = () => {
                                     <span>Subtotal</span>
                                     <span>${subtotal.toFixed(2)}</span>
                                 </div>
-                                <div className="flex justify-between text-text-light">
+                                {/* <div className="flex justify-between text-text-light">
                                     <span>Shipping</span>
                                     <span>{shipping === 0 ? 'FREE' : `$${shipping.toFixed(2)}`}</span>
-                                </div>
+                                </div> */}
                             </div>
 
                             <div className="border-t border-gray-200 pt-4">
