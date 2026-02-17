@@ -3,7 +3,8 @@ import { Button } from '../common/Button';
 
 export const CartSummary = ({ cart }) => {
     const subtotal = cart.total;
-    const shipping = subtotal > 100 ? 0 : 9.99;
+    // const shipping = subtotal > 100 ? 0 : 9.99;
+    const shipping = 0;
     const total = subtotal + shipping;
 
     return (
@@ -19,11 +20,11 @@ export const CartSummary = ({ cart }) => {
                     <span>Shipping</span>
                     <span>{shipping === 0 ? 'FREE' : `$${shipping.toFixed(2)}`}</span>
                 </div>
-                {subtotal < 100 && subtotal > 0 && (
+                {/* {subtotal < 100 && subtotal > 0 && (
                     <p className="text-sm text-success">
                         Spend ${(100 - subtotal).toFixed(2)} more for free shipping!
                     </p>
-                )}
+                )} */}
                 <div className="border-t border-gray-200 pt-3">
                     <div className="flex justify-between font-heading text-xl text-text">
                         <span>Total</span>
