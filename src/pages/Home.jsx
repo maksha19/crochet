@@ -12,7 +12,7 @@ export const Home = () => {
     return (
         <div>
             {/* Hero Section */}
-            <section className="relative bg-gradient-to-br from-accent-light to-background py-20 md:py-32">
+            <section className="relative bg-gradient-to-br from-accent-light to-background py-5 md:py-20">
                 <div className="container mx-auto px-4 text-center">
                     <h1 className="font-heading text-5xl md:text-7xl text-text mb-6 animate-slide-up">
                         Handcrafted with{' '}
@@ -23,21 +23,21 @@ export const Home = () => {
                     </p>
                     <div className="flex gap-4 justify-center animate-slide-up" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
                         <Link to="/shop">
-                            <Button>
+                            <Button className='text-xl'>
                                 Shop Now
                             </Button>
                         </Link>
-                        <a href="#featured">
+                        {/* <a href="#featured">
                             <Button variant="secondary">
                                 View Featured
                             </Button>
-                        </a>
+                        </a> */}
                     </div>
                 </div>
             </section>
 
             {/* Featured Products */}
-            <section id="featured" className="py-16 bg-background">
+            <section id="featured" className="py-8 bg-background">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12">
                         <h2 className="font-heading text-4xl text-text mb-4">

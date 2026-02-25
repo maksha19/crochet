@@ -86,7 +86,7 @@ export const products = [
         "image": "/images/keychain/trio.jpeg",
         "colors": [],
         "inStock": true,
-        "featured": true
+        "featured": false
     },
     {
         "id": "Strawberry_Keychain",
@@ -196,10 +196,10 @@ export const products = [
         "image": "/images/flower/tulip.jpeg",
         "colors": [],
         "inStock": true,
-        "featured": false
+        "featured": true
     },
     {
-        "id": "Tulip_Crochet",
+        "id": "Single_Tulip_Crochet",
         "name": "Single Tulip Crochet",
         "description": "This tulip crochet creation is a refined handmade crochet floral accent crafted with elegance.",
         "detailedUsageAndBenefits": [
@@ -218,7 +218,7 @@ export const products = [
         "image": "/images/flower/singletulip.jpeg",
         "colors": [],
         "inStock": true,
-        "featured": false
+        "featured": true
     },
     {
         "id": "Bell_Crochet",
@@ -306,7 +306,7 @@ export const products = [
         "image": "/images/utility/coinbag.jpeg",
         "colors": [],
         "inStock": true,
-        "featured": false
+        "featured": true
     },
     {
         "id": "Phone_Pouch",
@@ -394,7 +394,7 @@ export const products = [
         "image": "/images/homedecor/pottedplant.jpeg",
         "colors": [],
         "inStock": true,
-        "featured": false
+        "featured": true
     },
     // {
     //     "id": "Pattern_Flower",
@@ -459,7 +459,7 @@ export const products = [
         "image": "/images/tableaccessories/coaster.jpeg",
         "colors": [],
         "inStock": true,
-        "featured": false
+        "featured": true
     },
     {
         "id": "Crochet_Glass_Holder",
