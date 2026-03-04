@@ -5,11 +5,14 @@ import { Button } from '../common/Button';
 export const ProductCard = ({ product, onQuickView }) => {
     const { addToCart } = useCart();
     const [selectedColor, setSelectedColor] = useState(product.colors[0]);
+    const [selectedSize, setSelectedSize] = useState(0);
     const [isAdding, setIsAdding] = useState(false);
 
     const handleAddToCart = () => {
         setIsAdding(true);
-        addToCart(product, 1, selectedColor);
+        const size = product.size ? product.size[selectedSize] : null;
+        const price = product.price ? (Array.isArray(product.price) ? product.price[selectedSize] : product.price) : 0;
+        addToCart(product, 1, selectedColor, size, price);
 
         // Reset animation after a short delay
         setTimeout(() => setIsAdding(false), 600);
@@ -51,7 +54,7 @@ export const ProductCard = ({ product, onQuickView }) => {
                 <h3 className="font-heading text-xl text-text mb-2 line-clamp-1">
                     {product.name}
                 </h3>
-                <p className="text-text-light text-sm mb-3 line-clamp-4">
+                <p className="text-text-light text-sm  line-clamp-4 h-28">
                     {product.description}
                 </p>
 
@@ -75,13 +78,31 @@ export const ProductCard = ({ product, onQuickView }) => {
                         </div>
                     </div>
                 )}
-                {product.colors.length === 1 && (
+                {product?.colors?.length === 1 && (
                     <p className="text-xs text-text-light h-12 mb-2"></p>
                 )}
+                {/* Size Selection */}
+                {<div className="mb-3 flex">
+                    <p className="flex items-center justify-center font-bold text-xs text-text-light mr-2">Size:</p>
+                    <div className="flex flex-wrap gap-2">
+                        {product?.size?.map((size, index) => (
+                            <button
+                                key={index}
+                                onClick={() => setSelectedSize(index)}
+                                className={`px-3 py-1 text-xs rounded-full capitalize transition-all ${selectedSize === index
+                                    ? 'bg-primary text-white'
+                                    : 'bg-gray-200 text-text hover:bg-gray-300'
+                                    }`}
+                            >
+                                {size}
+                            </button>
+                        ))}
+                    </div>
+                </div>}
                 {/* Price and Add to Cart */}
                 <div className="flex items-center justify-between mt-4">
                     <span className="font-heading text-2xl text-primary font-semibold">
-                        ${product.price.toFixed(2)}
+                        ${product.price[selectedSize].toFixed(2)}
                     </span>
                     <Button
                         onClick={handleAddToCart}

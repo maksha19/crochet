@@ -5,7 +5,18 @@ const CartContext = createContext();
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState(() => {
         const saved = localStorage.getItem('crochetCart');
-        return saved ? JSON.parse(saved) : { items: [], total: 0 };
+        const initialCart = saved ? JSON.parse(saved) : { items: [], total: 0 };
+
+        // Normalize existing items to handle data structure changes
+        if (initialCart.items && initialCart.items.length > 0) {
+            initialCart.items = initialCart.items.map(item => ({
+                ...item,
+                price: Array.isArray(item.price) ? Number(item.price[0]) : Number(item.price)
+            }));
+            initialCart.total = initialCart.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        }
+
+        return initialCart;
     });
 
     useEffect(() => {
@@ -16,10 +27,13 @@ export const CartProvider = ({ children }) => {
         return items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     };
 
-    const addToCart = (product, quantity = 1, color = null) => {
+    const addToCart = (product, quantity = 1, color = null, size = null, price = null) => {
         setCart(prevCart => {
+            const selectedSize = size || (product.size ? product.size[0] : null);
+            const selectedPrice = price !== null ? price : (product.price ? (Array.isArray(product.price) ? product.price[0] : product.price) : 0);
+
             const existingItemIndex = prevCart.items.findIndex(
-                item => item.id === product.id && item.selectedColor === color
+                item => item.id === product.id && item.selectedColor === color && item.selectedSize === selectedSize
             );
 
             let newItems;
@@ -34,10 +48,11 @@ export const CartProvider = ({ children }) => {
                     {
                         id: product.id,
                         name: product.name,
-                        price: product.price,
+                        price: selectedPrice,
                         image: product.image,
                         quantity,
-                        selectedColor: color || product.colors[0]
+                        selectedColor: color || product.colors[0],
+                        selectedSize
                     }
                 ];
             }
@@ -49,10 +64,10 @@ export const CartProvider = ({ children }) => {
         });
     };
 
-    const removeFromCart = (productId, color) => {
+    const removeFromCart = (productId, color, size) => {
         setCart(prevCart => {
             const newItems = prevCart.items.filter(
-                item => !(item.id === productId && item.selectedColor === color)
+                item => !(item.id === productId && item.selectedColor === color && item.selectedSize === size)
             );
             return {
                 items: newItems,
@@ -61,15 +76,15 @@ export const CartProvider = ({ children }) => {
         });
     };
 
-    const updateQuantity = (productId, color, newQuantity) => {
+    const updateQuantity = (productId, color, size, newQuantity) => {
         if (newQuantity <= 0) {
-            removeFromCart(productId, color);
+            removeFromCart(productId, color, size);
             return;
         }
 
         setCart(prevCart => {
             const newItems = prevCart.items.map(item =>
-                item.id === productId && item.selectedColor === color
+                item.id === productId && item.selectedColor === color && item.selectedSize === size
                     ? { ...item, quantity: newQuantity }
                     : item
             );

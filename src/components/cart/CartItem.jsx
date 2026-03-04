@@ -18,18 +18,25 @@ export const CartItem = ({ item }) => {
             {/* Product Info */}
             <div className="flex-1">
                 <h3 className="font-heading text-lg text-text mb-1">{item.name}</h3>
-                <p className="text-sm text-text-light capitalize mb-2">
-                    Color: {item.selectedColor}
-                </p>
+                <div className="flex gap-4 mb-2">
+                    {/* <p className="text-sm text-text-light capitalize">
+                        Color: {item.selectedColor}
+                    </p> */}
+                    {item.selectedSize && (
+                        <p className="text-sm text-text-light capitalize">
+                            Size: {item.selectedSize}
+                        </p>
+                    )}
+                </div>
                 <p className="font-semibold text-primary">
-                    ${item.price.toFixed(2)}
+                    ${Number(Array.isArray(item.price) ? item.price[0] : item.price).toFixed(2)}
                 </p>
             </div>
 
             {/* Quantity Controls */}
             <div className="flex flex-col items-end justify-between">
                 <button
-                    onClick={() => removeFromCart(item.id, item.selectedColor)}
+                    onClick={() => removeFromCart(item.id, item.selectedColor, item.selectedSize)}
                     className="text-text-light hover:text-error transition-colors"
                     title="Remove item"
                 >
@@ -40,7 +47,7 @@ export const CartItem = ({ item }) => {
 
                 <div className="flex items-center gap-2">
                     <button
-                        onClick={() => updateQuantity(item.id, item.selectedColor, item.quantity - 1)}
+                        onClick={() => updateQuantity(item.id, item.selectedColor, item.selectedSize, item.quantity - 1)}
                         className="w-8 h-8 rounded-lg bg-gray-200 hover:bg-gray-300 flex items-center justify-center transition-colors active:scale-95"
                     >
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -49,7 +56,7 @@ export const CartItem = ({ item }) => {
                     </button>
                     <span className="w-8 text-center font-medium">{item.quantity}</span>
                     <button
-                        onClick={() => updateQuantity(item.id, item.selectedColor, item.quantity + 1)}
+                        onClick={() => updateQuantity(item.id, item.selectedColor, item.selectedSize, item.quantity + 1)}
                         className="w-8 h-8 rounded-lg bg-gray-200 hover:bg-gray-300 flex items-center justify-center transition-colors active:scale-95"
                     >
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -59,7 +66,7 @@ export const CartItem = ({ item }) => {
                 </div>
 
                 <p className="font-heading text-lg text-text">
-                    ${(item.price * item.quantity).toFixed(2)}
+                    ${(Number(Array.isArray(item.price) ? item.price[0] : item.price) * item.quantity).toFixed(2)}
                 </p>
             </div>
         </div>

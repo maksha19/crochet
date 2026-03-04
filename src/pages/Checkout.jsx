@@ -51,6 +51,7 @@ export const Checkout = () => {
         cart.items.forEach((item, index) => {
             message += `${index + 1}. ${item.name}\n`;
             // message += `   - Color: ${item.selectedColor}\n`;
+            message += `   - Size: ${item.selectedSize}\n`;
             message += `   - Quantity: ${item.quantity}\n`;
             message += `   - Price: $${item.price.toFixed(2)} each\n`;
             message += `   - Subtotal: $${(item.price * item.quantity).toFixed(2)}\n\n`;

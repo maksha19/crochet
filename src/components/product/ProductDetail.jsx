@@ -6,6 +6,7 @@ import { useCart } from '../../context/CartContext';
 export const ProductDetail = ({ product, isOpen, onClose }) => {
     const { addToCart } = useCart();
     const [selectedColor, setSelectedColor] = useState(product?.colors[0]);
+    const [selectedSize, setSelectedSize] = useState(0);
     const [quantity, setQuantity] = useState(1);
     const [isAdding, setIsAdding] = useState(false);
 
@@ -13,7 +14,9 @@ export const ProductDetail = ({ product, isOpen, onClose }) => {
 
     const handleAddToCart = () => {
         setIsAdding(true);
-        addToCart(product, quantity, selectedColor);
+        const size = product.size ? product.size[selectedSize] : null;
+        const price = product.price ? (Array.isArray(product.price) ? product.price[selectedSize] : product.price) : 0;
+        addToCart(product, quantity, selectedColor, size, price);
 
         setTimeout(() => {
             setIsAdding(false);
@@ -48,11 +51,12 @@ export const ProductDetail = ({ product, isOpen, onClose }) => {
                         )}
                     </div>
                 </div>
+
                 {/* Product Details */}
                 <div className="flex flex-col">
                     <div className="mb-4">
                         <span className="font-heading text-4xl text-primary font-semibold">
-                            ${product.price.toFixed(2)}
+                            ${product.price[selectedSize].toFixed(2)}
                         </span>
                         {product.featured && (
                             <span className="ml-4 bg-accent text-text px-3 py-1 rounded-full text-sm font-medium">
@@ -75,8 +79,26 @@ export const ProductDetail = ({ product, isOpen, onClose }) => {
                             </ul>
                         )}
                     </div>
+                    {/* Size Selection */}
+                    {<div className="mb-3 flex">
+                        <p className="flex items-center justify-center font-bold text-xs text-text-light mr-2">Size:</p>
+                        <div className="flex flex-wrap gap-2">
+                            {product?.size?.map((size, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => setSelectedSize(index)}
+                                    className={`px-3 py-1 text-xs rounded-full capitalize transition-all ${selectedSize === index
+                                        ? 'bg-primary text-white'
+                                        : 'bg-gray-200 text-text hover:bg-gray-300'
+                                        }`}
+                                >
+                                    {size}
+                                </button>
+                            ))}
+                        </div>
+                    </div>}
                     {/* Color Selection */}
-                    <div className="mb-6">
+                    {product.colors.length > 1 && (<div className="mb-6">
                         <label className="block text-text font-medium mb-3">Select Color:</label>
                         <div className="flex flex-wrap gap-3">
                             {product.colors.map(color => (
@@ -92,7 +114,7 @@ export const ProductDetail = ({ product, isOpen, onClose }) => {
                                 </button>
                             ))}
                         </div>
-                    </div>
+                    </div>)}
 
                     {/* Quantity Selection */}
                     <div className="mb-6">
