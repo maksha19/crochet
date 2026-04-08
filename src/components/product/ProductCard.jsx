@@ -12,7 +12,8 @@ export const ProductCard = ({ product, onQuickView }) => {
         setIsAdding(true);
         const size = product.size ? product.size[selectedSize] : null;
         const price = product.price ? (Array.isArray(product.price) ? product.price[selectedSize] : product.price) : 0;
-        addToCart(product, 1, selectedColor, size, price);
+        const image = product.image[selectedSize];
+        addToCart(product, 1, selectedColor, size, price, image);
 
         // Reset animation after a short delay
         setTimeout(() => setIsAdding(false), 600);
@@ -23,7 +24,7 @@ export const ProductCard = ({ product, onQuickView }) => {
             {/* Product Image */}
             <div className="relative overflow-hidden aspect-square bg-gray-100">
                 <img
-                    src={product.image}
+                    src={product.image[selectedSize]}
                     alt={product.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     onError={(e) => {

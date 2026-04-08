@@ -27,10 +27,11 @@ export const CartProvider = ({ children }) => {
         return items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     };
 
-    const addToCart = (product, quantity = 1, color = null, size = null, price = null) => {
+    const addToCart = (product, quantity = 1, color = null, size = null, price = null, image = null) => {
         setCart(prevCart => {
             const selectedSize = size || (product.size ? product.size[0] : null);
             const selectedPrice = price !== null ? price : (product.price ? (Array.isArray(product.price) ? product.price[0] : product.price) : 0);
+            const selectedImage = image || product.image[0];
 
             const existingItemIndex = prevCart.items.findIndex(
                 item => item.id === product.id && item.selectedColor === color && item.selectedSize === selectedSize
@@ -49,7 +50,7 @@ export const CartProvider = ({ children }) => {
                         id: product.id,
                         name: product.name,
                         price: selectedPrice,
-                        image: product.image,
+                        image: selectedImage,
                         quantity,
                         selectedColor: color || product.colors[0],
                         selectedSize

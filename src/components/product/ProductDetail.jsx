@@ -16,7 +16,8 @@ export const ProductDetail = ({ product, isOpen, onClose }) => {
         setIsAdding(true);
         const size = product.size ? product.size[selectedSize] : null;
         const price = product.price ? (Array.isArray(product.price) ? product.price[selectedSize] : product.price) : 0;
-        addToCart(product, quantity, selectedColor, size, price);
+        const image = product.image[selectedSize];
+        addToCart(product, quantity, selectedColor, size, price, image);
 
         setTimeout(() => {
             setIsAdding(false);
@@ -31,7 +32,7 @@ export const ProductDetail = ({ product, isOpen, onClose }) => {
                 <div>
                     <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
                         <img
-                            src={product.image}
+                            src={product.image[selectedSize]}
                             alt={product.name}
                             className="w-full h-full object-cover"
                             onError={(e) => {
